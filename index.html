@@ -1,25 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ZUIT</title>
-    <style>
-      body {
-        margin: 0;
-      }
-    </style>
-    <script type="importmap">
-			{
-				"imports": {
-					"three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
-          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
-        }
-			}
-		</script>
-  </head>
-  <body>
-    <script type="module" src="index.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071819">
+  <link rel="icon" href="./favicon.ico">
+  <title>Zuit — Unity Developer &amp; Game Maker</title>
+  <meta name="description" content="Games, playable advertising and lightweight Unity WebGL work by Zuit.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zuit — Unity Developer &amp; Game Maker">
+  <meta property="og:description" content="Games, playable advertising and lightweight Unity WebGL work by Zuit.">
+  <meta property="og:url" content="https://zuitsuit.github.io/">
+  <meta property="og:image" content="https://zuitsuit.github.io/assets/media/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zuit — Unity Developer &amp; Game Maker">
+  <meta name="twitter:description" content="Games, playable advertising and lightweight Unity WebGL work by Zuit.">
+  <meta name="twitter:image" content="https://zuitsuit.github.io/assets/media/og.png">
+  <link rel="stylesheet" href="./assets/css/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Zuit, back to top">ZUIT<span>●</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#idea-fix">Idea Fix</a>
+      <a href="#life">Life</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="scene-switch" href="./playworks-portfolio/" aria-label="Switch from the fast site to the interactive Playworks scene"><span></span> Playworks scene</a>
+  </header>
 
-  </body>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Unity developer · full-stack builder · game maker</p>
+        <h1 id="hero-title">Making tiny worlds<br>feel <em>alive.</em></h1>
+        <p class="intro">20+ shipped interactive products across games, playable ads and brand installations. I build lightweight Unity experiences with personality—and the web around them.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="./playworks-portfolio/">Play interactive portfolio <span aria-hidden="true">↗</span></a>
+          <div class="hero-jumps" aria-label="Jump to a portfolio section">
+            <a class="button button-quiet" href="#work">Play the prototypes <span aria-hidden="true">↓</span></a>
+            <a class="button button-jump" href="#idea-fix">Idea Fix</a>
+            <a class="button button-jump" href="#life">Life</a>
+            <a class="button button-jump" href="#misc">Misc</a>
+            <a class="button button-jump" href="#contact">Contact</a>
+          </div>
+        </div>
+        <p class="load-note">Interactive experiences load only when opened. <a href="./isometric-portfolio/">Use the Unity WebGL fallback</a>.</p>
+      </div>
+
+      <a class="scene-preview" href="./playworks-portfolio/" aria-label="Open the interactive Playworks portfolio scene">
+        <img src="./assets/screenshots/playworks-portfolio.png" width="1280" height="720" alt="The complete isometric Playworks portfolio room with interactive exhibits" fetchpriority="high">
+        <span><b>Live Playworks scene</b><small>Explore the room ↗</small></span>
+      </a>
+    </section>
+
+    <section class="idea-fix" id="idea-fix" aria-labelledby="idea-fix-title">
+      <div class="idea-fix-intro">
+        <div class="section-heading">
+          <p class="eyebrow">Featured release</p>
+          <h2 id="idea-fix-title">Idea Fix</h2>
+        </div>
+        <div class="idea-fix-copy">
+          <p>An incremental physics game about pushing levers, clicking buttons and coming to terms with obsession. Built and self-published with a 10-person international team.</p>
+          <a class="button button-primary" href="https://store.steampowered.com/app/3023620/Idea_Fix/" target="_blank" rel="noopener">View Idea Fix on Steam <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="idea-fix-gallery" aria-label="Idea Fix screenshots">
+        <figure class="idea-fix-wide"><img src="./assets/screenshots/idea-fix-machine.jpg" width="1920" height="1080" loading="lazy" decoding="async" alt="A dense industrial machine filled with screens, controls and red levers in Idea Fix"><figcaption>Operate the Machine</figcaption></figure>
+        <figure><img src="./assets/screenshots/idea-fix-outside.jpg" width="1920" height="1080" loading="lazy" decoding="async" alt="A tactile valve and mechanical control panel in Idea Fix"><figcaption>Every control is physical</figcaption></figure>
+        <figure><img src="./assets/screenshots/idea-fix-controls.jpg" width="1920" height="1080" loading="lazy" decoding="async" alt="A mysterious glowing green terminal conversation in Idea Fix"><figcaption>There is more beneath the surface</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="projects" id="work" aria-labelledby="games-title">
+      <div class="section-heading">
+        <p class="eyebrow">Playable work</p>
+        <h2 id="games-title">Three prototypes. Three different strengths.</h2>
+        <p>Each is a focused Unity WebGL build and opens in a new tab. Nothing heavy downloads until you choose one.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card crossy">
+          <img class="card-art" src="./assets/screenshots/crossy-crash.png" width="1280" height="720" loading="lazy" decoding="async" alt="Crossy Crash gameplay with the player weaving through moving traffic">
+          <p>01 · 3D arcade timing</p><h3>Crossy Crash</h3>
+          <p class="card-copy">Tap and swipe through moving traffic. Readable input, physical payoff and a camera-directed punchline.</p>
+          <a href="./crossy-crash/" target="_blank" rel="noopener">Play in a new tab ↗</a>
+        </article>
+        <article class="project-card lane">
+          <img class="card-art" src="./assets/screenshots/lane-legends.png" width="1280" height="720" loading="lazy" decoding="async" alt="Lane Legends battle with several units deployed between two castles">
+          <p>02 · Systems &amp; strategy</p><h3>Lane Legends</h3>
+          <p class="card-copy">Spend energy, counter enemy units and break the opposing castle on one tightly authored lane.</p>
+          <a href="./lane-legends/" target="_blank" rel="noopener">Play in a new tab ↗</a>
+        </article>
+        <article class="project-card asteroid">
+          <img class="card-art" src="./assets/screenshots/asteroid-blitz.png" width="1280" height="720" loading="lazy" decoding="async" alt="Asteroid Blitz gameplay just after an asteroid is destroyed">
+          <p>03 · Feel per byte</p><h3>Asteroid Blitz</h3>
+          <p class="card-copy">Aim, fire and clear nine moving targets before time runs out—built for maximum response at minimum weight.</p>
+          <a href="./asteroid-blitz/" target="_blank" rel="noopener">Play in a new tab ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="work-ledger" id="selected-work" aria-labelledby="work-title">
+      <div class="section-heading sticky-heading"><p class="eyebrow">Selected work</p><h2 id="work-title">Code, craft and shipping.</h2></div>
+      <div class="ledger-list">
+        <article class="work-card">
+          <div class="work-card-top"><span>01</span><small>Web systems</small></div>
+          <div class="work-card-copy"><h3>Full-stack foundations</h3><p>A web-development career spanning Cronix MS, Upwork and independent freelance work—the foundation behind my browser-first approach.</p></div>
+          <div class="brand-row" aria-label="Work associated with Cronix MS and Upwork">
+            <div class="brand-chip brand-chip-wide"><img src="./assets/logos/cronix.webp" width="136" height="48" loading="lazy" decoding="async" alt=""><b>Cronix MS</b></div>
+            <div class="brand-chip brand-chip-wide"><img src="./assets/logos/upwork.svg" width="100" height="30" loading="lazy" decoding="async" alt=""><b>Upwork</b></div>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="work-card-top"><span>02</span><small>Client work</small></div>
+          <div class="work-card-copy"><h3>Studio collaborations</h3><p>Contract game development for international studios and independent clients, including White Guardian Studios, Everfall Games and Basement Dweller Games.</p></div>
+          <div class="brand-row" aria-label="Work associated with White Guardian Studios, Everfall Games and Basement Dweller Games">
+            <div class="brand-chip"><img src="./assets/logos/white-guardian.webp" width="192" height="192" loading="lazy" decoding="async" alt=""><b>White Guardian</b></div>
+            <div class="brand-chip brand-chip-wide"><img src="./assets/logos/everfall.webp" width="186" height="46" loading="lazy" decoding="async" alt=""><b>Everfall Games</b></div>
+            <div class="brand-chip"><img src="./assets/logos/basement-dweller.webp" width="192" height="192" loading="lazy" decoding="async" alt=""><b>Basement Dweller</b></div>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="work-card-top"><span>03</span><small>Specialty</small></div>
+          <div class="work-card-copy"><h3>WebGL &amp; branded playables</h3><p>Lightweight Unity WebGL builds, branded interactive experiences and playable advertising—including work for Estée Lauder and NodeToadz.</p></div>
+          <div class="brand-row" aria-label="Work associated with Estée Lauder and NodeToadz">
+            <div class="brand-chip brand-chip-wide"><img src="./assets/logos/estee-lauder.webp" width="222" height="140" loading="lazy" decoding="async" alt=""><b>Estée Lauder</b></div>
+            <div class="brand-chip"><img src="./assets/logos/nodetoadz.webp" width="192" height="192" loading="lazy" decoding="async" alt=""><b>NodeToadz</b></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="life" id="life" aria-labelledby="life-title">
+      <div class="section-heading"><p class="eyebrow">Life</p><h2 id="life-title">The scenic route into game development.</h2></div>
+      <div class="life-grid">
+        <article><b>01</b><h3>Early life · Russia</h3><p>Sci-fi books, improvised board games and theorycrafting games long before regular access to a computer.</p></article>
+        <article><b>02</b><h3>School, RPGs &amp; first career</h3><p>BioWare, Bethesda and shareware worlds led through university, an app internship and into professional web development.</p></article>
+        <article><b>03</b><h3>Learning Unity &amp; going freelance</h3><p>I left the office, learned Unity and started building games with people around the world. It has been an absolute blast.</p></article>
+        <article><b>04</b><h3>Love, cats, Israel &amp; survival</h3><p>I met my wife, rescued seven cats, moved to Israel and released a game on Steam. The rest is a surprisingly eventful story.</p></article>
+      </div>
+    </section>
+
+    <section class="misc" id="misc" aria-labelledby="misc-title">
+      <div class="section-heading"><p class="eyebrow">Miscellany</p><h2 id="misc-title">A few good rabbit holes.</h2></div>
+      <div class="misc-grid">
+        <article class="feature-card"><span>Hobby projects</span><h3>Small games, odd ideas, jam winners.</h3><p>Explore experiments built for fun, curiosity and the occasional deadline.</p><a href="https://zuitsuit.itch.io/" target="_blank" rel="noopener">Visit itch.io ↗</a></article>
+        <article class="feature-card"><span>Unity resources</span><h3>The bookmarks I send to people.</h3><ul><li><a href="https://discord.com/invite/unity" target="_blank" rel="noopener">Unity Discord</a></li><li><a href="https://www.w3schools.com/cs/index.php" target="_blank" rel="noopener">W3Schools C#</a></li><li><a href="https://catlikecoding.com/unity/" target="_blank" rel="noopener">Catlike Coding</a></li><li><a href="https://learn.unity.com/learn/" target="_blank" rel="noopener">Unity Learn</a></li></ul></article>
+        <article class="feature-card games-list"><span>Games everyone has to try</span><h3>Start with these six.</h3><p><a href="https://store.steampowered.com/app/2570630/20_Small_Mazes/" target="_blank" rel="noopener">20 Small Mazes</a> · <a href="https://store.steampowered.com/app/736260/" target="_blank" rel="noopener">Baba Is You</a> · <a href="https://store.steampowered.com/app/632470/" target="_blank" rel="noopener">Disco Elysium</a> · <a href="https://store.steampowered.com/app/881100/" target="_blank" rel="noopener">Noita</a> · <a href="https://store.steampowered.com/app/753640/" target="_blank" rel="noopener">Outer Wilds</a> · <a href="https://store.steampowered.com/app/785790/" target="_blank" rel="noopener">WHAT THE GOLF?</a></p><p class="aside">The interactive scene contains all 26 recommendations.</p></article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-title">Have an interesting problem?<br><em>Let’s talk.</em></h2>
+      <div class="contact-links"><a href="mailto:zootziot@gmail.com">Email <span>↗</span></a><a href="https://discord.gg/tgqzUKVeKg" target="_blank" rel="noopener">Discord <span>↗</span></a><a href="https://www.linkedin.com/in/zuit/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a></div>
+    </section>
+  </main>
+
+  <footer><p>Zuit · Unity developer &amp; game maker</p><a href="#top">Back to top ↑</a></footer>
+</body>
 </html>

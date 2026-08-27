@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#061516">
+  <link rel="icon" href="../favicon.ico">
+  <title>Asteroid Blitz — Zuit</title>
+  <meta name="description" content="Aim and fire to clear every target before time runs out.">
+  <style>
+    :root{color-scheme:dark;--accent:#8bb2ff}*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;background:#061516;color:#e9f1e9;font-family:Arial,Helvetica,sans-serif;overflow:hidden}.shell{height:100vh;height:100dvh;display:grid;grid-template-rows:auto 1fr auto;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}header,footer{min-height:58px;padding:10px clamp(14px,3vw,34px);display:flex;align-items:center;justify-content:space-between;gap:20px;background:#081c1dcc;border-color:rgba(233,241,233,.12);z-index:3}header{border-bottom:1px solid rgba(233,241,233,.12)}footer{border-top:1px solid rgba(233,241,233,.12);color:#8da3a1;font-size:12px}a{color:inherit;text-underline-offset:4px}.back{text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}.back span{color:var(--accent);margin-right:8px}.title{text-align:right}.title p{margin:0;color:var(--accent);font-size:10px;font-weight:800;letter-spacing:.16em}.title h1{margin:1px 0 0;font-size:clamp(15px,2vw,20px)}main{min-height:0;position:relative;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#123332,#061516 70%)}#unity-canvas{display:block;width:100%;height:100%;touch-action:none;background:#061516}.loading{position:absolute;inset:0;display:grid;place-items:center;background:#061516;z-index:2;transition:opacity .35s}.loading.done{opacity:0;pointer-events:none}.load-card{width:min(420px,calc(100% - 40px));text-align:center}.mark{width:44px;height:44px;margin:0 auto 22px;background:var(--accent);transform:rotate(45deg);box-shadow:17px 17px 0 rgba(255,255,255,.08)}.loading h2{margin:0 0 9px;font-size:clamp(25px,5vw,42px)}.loading p{margin:0;color:#8da3a1}.bar{height:3px;margin-top:28px;background:rgba(255,255,255,.1);overflow:hidden}.bar i{display:block;width:0;height:100%;background:var(--accent);transition:width .15s}.percent{display:block;margin-top:9px;color:var(--accent);font:700 11px/1 monospace}.error{display:none;margin-top:22px;color:#ff9d8d}.error.show{display:block}.error a{color:var(--accent)}button{border:1px solid rgba(233,241,233,.2);background:transparent;color:#e9f1e9;padding:7px 10px;border-radius:3px;cursor:pointer;font:700 11px Arial;text-transform:uppercase;letter-spacing:.08em}button:focus-visible,a:focus-visible{outline:3px solid #f5d25f;outline-offset:3px}@media(max-width:640px){footer span:first-child{max-width:72%;line-height:1.25}.title p{display:none}}@media(prefers-reduced-motion:reduce){.loading,.bar i{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header><a class="back" href="../"><span>←</span> Back to portfolio</a><div class="title"><p>FEEL PER BYTE</p><h1>Asteroid Blitz</h1></div></header>
+    <main>
+      <canvas id="unity-canvas" tabindex="0" aria-label="Asteroid Blitz interactive canvas"></canvas>
+      <div class="loading" id="loading" role="status" aria-live="polite"><div class="load-card"><div class="mark" aria-hidden="true"></div><h2>Loading Asteroid Blitz</h2><p>Aim and fire to clear every target before time runs out.</p><div class="bar"><i id="bar"></i></div><span class="percent" id="percent">0%</span><p class="error" id="error">This experience could not start. <a href="../">Return to the lightweight portfolio.</a></p></div></div>
+    </main>
+    <footer><span>Aim and fire to clear every target before time runs out.</span><button id="fullscreen" type="button">Fullscreen</button></footer>
+  </div>
+  <script src="./Build/asteroid-blitz.loader.js"></script>
+  <script>
+    const canvas=document.querySelector('#unity-canvas'),loading=document.querySelector('#loading'),bar=document.querySelector('#bar'),percent=document.querySelector('#percent'),error=document.querySelector('#error');
+    const config={dataUrl:'./Build/asteroid-blitz.data.unityweb',frameworkUrl:'./Build/asteroid-blitz.framework.js.unityweb',codeUrl:'./Build/asteroid-blitz.wasm.unityweb',streamingAssetsUrl:'StreamingAssets',companyName:'Zuit',productName:'Asteroid Blitz',productVersion:'1.0'};
+    createUnityInstance(canvas,config,p=>{const n=Math.round(p*100);bar.style.width=n+'%';percent.textContent=n+'%'}).then(instance=>{loading.classList.add('done');canvas.focus();document.querySelector('#fullscreen').addEventListener('click',()=>instance.SetFullscreen(1))}).catch(reason=>{console.error(reason);error.classList.add('show');percent.textContent='LOAD FAILED'});
+  </script>
+</body>
+</html>
