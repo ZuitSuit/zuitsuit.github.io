@@ -18,7 +18,7 @@
   </div>
   <script>
     const playworksFrame=document.querySelector('#playworks-frame');
-    const playworksAssetOverrides={"22652":"../assets/media/portfolio-music.mp3","22864":"../assets/media/tower-albedo.jpg"};
+    const playworksAssetOverrides={"22614":"../assets/media/portfolio-music.mp3","22832":"../assets/media/tower-albedo.jpg"};
     playworksFrame.addEventListener('load',()=>{
       playworksFrame.contentWindow.postMessage(JSON.stringify({name:'setPlaygroundAssetOverrides',data:JSON.stringify(playworksAssetOverrides)}),'*');
     });
